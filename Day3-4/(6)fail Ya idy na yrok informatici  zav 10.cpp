@@ -1,24 +1,22 @@
 
-/*10.Даны вещественные числа а, Ь, с, d, e, f, g. Найти
-площадь пятиугольника, изображенного на рисунке. (Опреде­
-лить функцию для расчета площади треугольника по трем его
-сторонам.) 
-
+/*10.dani prosti chisla, Ь, с, d, e, f, g. 
+naitu ploshy pramokytnika(napisaTb fynkII,iy)
 */
 #include <iostream>
 #include <math.h>
+#include <iomanip>
 using namespace std;
 float func_triangle_Geroin(float a,float b,float c)
 {float pp,s;
-if(a >= b + c || b >= a + c || c >= b + a)
-{return 0;
-}
-else{pp=(a+b+c)*0.5;
+pp=(a+b+c)*0.5;
 return sqrt(pp*(pp-a)*(pp- b )*(pp-c));;
 }
-
-
-}
+bool func_real_triangle(float a,float b,float c)
+{
+     if(a <= b + c && b <= a + c && c <= b + a)
+{return true;}
+else{return false;}
+     }
 
 int main()
 {float a,b,c,d,e,f,g;
@@ -30,9 +28,10 @@ cin>>d;
 cin>>e;
 cin>>f;
 cin>>g;
-
-
-
-cout<<"Plosha = "<<func_triangle_Geroin( a, b, f)+func_triangle_Geroin( f, g, c)+func_triangle_Geroin( g, e, d)<<" odinic";
+if(func_real_triangle(a,b,f)==1 && func_real_triangle(f,g,c)==1 && func_real_triangle(g,e,d)==1){
+cout<<"Plosha = "<<setiosflags(ios::fixed) <<setprecision(1)<<func_triangle_Geroin( a, b, f)+func_triangle_Geroin( f, g, c)+func_triangle_Geroin( g, e, d)<<" odinic";
+}
+else{cout<<"Unrial triangles"<<endl;}
+system("pause");
 }
 

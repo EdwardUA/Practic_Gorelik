@@ -32,7 +32,7 @@ float function;
 	  for(float i=-PI;i<PI;i+=0.5)
 	  {function=(sin(i)-log(i));
 	  	  file << "X=" <<i<<"\t"<<"F(X)="<<scientific<<setiosflags(ios::fixed) <<setprecision(1)<<function<<"\n"<<"----------------------"<<endl;
-	  }}  //Zachem pisaTb 4 otdeLbnih faila esli mojno zapihnytb vse v odny
+	  }}  
 main (){
 createFile();
 addFunctionResults();

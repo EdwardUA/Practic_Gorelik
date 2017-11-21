@@ -1,8 +1,10 @@
 
-/*16. Два простых числа называются «близнецами», если
-они отличаются друг от друга на 2 (таковы, например, числа
-41 и 43). Напечатать все пары чисел-«близнецов», не превы­
-шающих значение 200. 
+/*16. rekyrsivno chisla fibonachi
+Vidpovistu na pitannya chum pogana rekyrsiya?
+vidpovidb:https://habrahabr.ru/sandbox/28723/
+Tobto:orjadok slozhnosti vtorogo nerekursivnogo algoritma raven O(n),
+gde n-nomer iskomogo chisla Fibonachchi, to porjadok slozhnosti rekursivnogo algoritma, neochevidno,
+raven O(2^n) dva v stepeni n
 */
 #include <iostream>
  

@@ -10,20 +10,19 @@ int main()
         int gl=0, sg=0, i, j;
         char gls[]="aeiouy";
         char GLS[]="AEIOUY";
-        char str[100];
+        char slovo[100];
         cout<<"Enter string: ";
-        cin>>str;
-        
-        for(i=0; i<(strlen(str)); i++)
+        cin>>slovo;
+        for(i=0; i<(strlen(slovo)); i++)
                 for(j=0; j<strlen(gls); j++)
-                        if(str[i]==gls[j] || str[i]==GLS[j])
+                        if(slovo[i]==gls[j] || slovo[i]==GLS[j])
                                 gl++;
-        cout<<endl<<"Vowels  - "<<gl<<endl;
+        cout<<endl<<"Kilbkistb golosnih "<<gl<<endl;
         cout<<"Vovels lerers :";
          for (int i = 0; i <100; i++){
          	for(j=0; j<strlen(gls); j++){
-         	if(str[i]==gls[j] || str[i]==GLS[j]){
-         		cout  << str[i] << ",";
+         	if(slovo[i]==gls[j] || slovo[i]==GLS[j]){
+         		cout  << slovo[i] << ",";
 			 }}
 		 }
 		 

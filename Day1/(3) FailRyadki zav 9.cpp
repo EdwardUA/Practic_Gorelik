@@ -4,7 +4,6 @@
 інші символи розташувати останніми.*/ 
    #include <iostream>
 #include <string.h>
-//const int N =10;
 using namespace std;
 int main() {
 	cout<<"SkoiLbko slov vvesti?(int) : ";

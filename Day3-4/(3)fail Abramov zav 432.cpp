@@ -5,29 +5,32 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
- 
- 
+#include<cstdlib>
+#include<time.h>
+#include<iostream>
+#include <iomanip>
+ using namespace std;
 double p(int y) {
-    double const a0 = 0.1;
-    double const a1 = 1.21;
-    double const a2 = 12.321;
-    double const a3 = 123.4321;
-    double const a4 = 1234.321;
-    double const a5 = 12343.21;
-    double const a6 = 123432.1;
-    
-    return a6*pow(y,6)+a5*pow(y,5)+a4*pow(y,4)+a3*pow(y,3)+a2*pow(y,2)+a1*pow(y,1)+a0;
+       srand( time(0) );
+       int num[5];
+       int i;
+       for ( i=0; i<5; i++) 
+       {num[i]=rand()%100;}
+    return num[5]*pow(y,num[5])+num[4]*pow(y,num[4])+num[4]*pow(y,num[3])+num[2]*pow(y,num[2])+num[1]*pow(y,num[1])+num[0]*pow(y,num[0])+num[0];
 }
  
  
-int main() {
+ main() {
     int const x1 = 1;
     int const x2 = 3;
     int const x3 = 4;
     
-    printf("p(%d) - p(%d) = %f\n", x1 + 1, x1, p(x1 + 1) - p(x1));
-    printf("p(%d) - p(%d) = %f\n", x2 + 1, x2, p(x2 + 1) - p(x2));
-    printf("p(%d) - p(%d) = %f\n", x3 + 1, x3, p(x3 + 1) - p(x3));
-    
+  cout<<"p(%d) - p(%d) = %f "<<setiosflags(ios::fixed) <<setprecision(1)<< x1 + 1, x1, p(x1 + 1) - p(x1);
+  cout<<endl;
+    cout<<"p(%d) - p(%d) = %f " <<setprecision(1)<<x2 + 1, x2, p(x2 + 1) - p(x2);
+    cout<<endl;
+    cout<<"p(%d) - p(%d) = %f " <<setprecision(1)<<x3 + 1, x3, p(x3 + 1) - p(x3);
+    cout<<endl;
+  system("pause");
     return EXIT_SUCCESS;
 }
